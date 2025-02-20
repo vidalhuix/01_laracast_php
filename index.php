@@ -1,46 +1,10 @@
+<?php
 
- <?php
-    $books = [
-        [
-            'name' => 'Anna Cadabra',
-            'author' => 'Pitxiliqui',
-            'link' => 'http://lacasa.cat',
-        ],
-        [
-            'name' => 'Marcus Pocus',
-            'author' => 'Pitxiliqui',
-            'link' => 'http://lacasa.cat',
-        ],
-        [
-            'name' => 'Sapiens',
-            'author' => 'Harari',
-            'link' => 'http://campus.edu',
-        ]
-    ];
+require 'functions.php';
+require 'router.php';
 
-    function filterByAuthor($books, $author)
-    {
-        $filteredBooks = [];
-
-        foreach ($books as $book) {
-            if ($book["author"] === $author) {
-                $filteredBooks[] = $book;
-            }
-        }
-
-        return $filteredBooks;
-    }
+// echo '<pre>';
+// print_r(parse_url($_SERVER['REQUEST_URI']));
+// echo '</pre>';
 
 
-    $business = [
-        "name" => "Laracast",
-        "price" => 15,
-        "categories" => [
-            "php",
-            "laravel",
-            "JavaScript"
-        ]
-    ];
-
-
-    require "views/index.view.php";
